@@ -36,6 +36,11 @@ const router = createRouter({
             path: '/data',
             name: 'data',
             component: () => import('./components/data')
+        },
+        {
+            path: '/share',
+            name: 'share',
+            component: () => import('./components/share')
         }
     ],
 })

@@ -36,9 +36,6 @@
         <nut-cell>广东新闻5</nut-cell>
     </nut-tabpane>
   </nut-tabs>
-
-  <nut-icon name="retweet" color="#fff"> </nut-icon>
-  <span class="text">{{ myActive ? "自定义开" : "自定义关" }}</span>
 </template>
   
 <script>
