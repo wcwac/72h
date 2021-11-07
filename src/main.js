@@ -4,37 +4,38 @@ import NutUI from "@nutui/nutui";
 import "@nutui/nutui/dist/style.css";
 
 import { createRouter, createWebHistory } from 'vue-router'
-import index from './components/index'
-import submit from './components/submit'
-import my from './components/my'
-import shop from './components/shop'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
             path: '/',
             name: 'a',
-            component: index
+            component: () => import('./components/index')
         },
         {
             path: '/index',
             name: 'b',
-            component: index
+            component: () => import('./components/index')
         },
         {
             path: '/submit',
             name: 'c',
-            component: submit
+            component: () => import('./components/submit')
         },
         {
             path: '/my',
             name: 'my',
-            component: my
+            component: () => import('./components/my')
         },
         {
             path: '/shop',
             name: 'shop',
-            component: shop
+            component: () => import('./components/shop')
+        },
+        {
+            path: '/data',
+            name: 'data',
+            component: () => import('./components/data')
         }
     ],
 })
